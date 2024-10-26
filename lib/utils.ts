@@ -107,7 +107,7 @@ function searchMatch(a: string, b: string): number {
     for (let i = 1; i <= aLen; i++) {
       const cost = a[i - 1] === b[j - 1] ? 0 : 1;
       currRow[i] = Math.min(prevRow[i] + 1, currRow[i - 1] + 1, prevRow[i - 1] + cost);
-      
+
       if (currRow[i] > maxDistance) {
         return maxDistance;
       }
@@ -170,13 +170,13 @@ function calculateProximityScore(query: string, content: string): number {
 
   const words = content.split(/\s+/);
   const queryWords = query.split(/\s+/);
-  
+
   let proximityScore = 0;
   let firstIndex = -1;
 
   queryWords.forEach((queryWord, queryIndex) => {
     const wordIndex = words.indexOf(queryWord, firstIndex + 1);
-    
+
     if (wordIndex !== -1) {
       if (queryIndex === 0) {
         proximityScore += 30;
@@ -262,15 +262,15 @@ export function advanceSearch(query: string) {
       const highlightedSnippet = highlight(snippet, queryWords.join(' '));
 
       return {
-        title: doc.title || "Untitled",
+        title: doc.title || "",
         href: `${doc.slug}`,
         snippet: highlightedSnippet,
         description: doc.description || "",
         relevance: relevanceScore,
       };
     })
-    .filter((doc) => doc.relevance > 0)
-    .sort((a, b) => b.relevance - a.relevance)
+      .filter((doc) => doc.relevance > 0)
+      .sort((a, b) => b.relevance - a.relevance)
   );
 
   return results;
@@ -364,7 +364,7 @@ export function highlight(snippet: string, searchTerms: string): string {
   if (terms.length === 0) return snippet;
 
   const regex = new RegExp(`(${terms.join('|')})(?![^<>]*>)`, 'gi');
-  
+
   return snippet.replace(/(<[^>]+>)|([^<]+)/g, (match, htmlTag, textContent) => {
     if (htmlTag) return htmlTag;
     return textContent.replace(regex, "<span class='highlight'>$1</span>");

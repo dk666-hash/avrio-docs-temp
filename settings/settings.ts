@@ -8,7 +8,7 @@ export const sitename = "AVRIO Docs";
 export const description = "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.";
 export const keywords = ["Next.js", "documentation", "Trianz", "open source", "SEO"];
 export const urlimage = "/images/og-image.png";
-export const imagealt = "AVRIO Documentation";
+export const imagealt = "AVRIO Docs";
 export const twitterhandle = "@Trianz";
 
 export const companyname = "Trianz AVRIO";

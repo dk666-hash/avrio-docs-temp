@@ -28,8 +28,8 @@ export const Documents: Paths[] = [
           items:
             [
               {
-                title: "Data Product",
-                href: "/search-bar",
+                title: "Data Products",
+                href: "/data-products",
               },
               {
                 title: "Data Assets",
@@ -65,7 +65,7 @@ export const Documents: Paths[] = [
         },
         {
           title: "User Actions for a Data Product",
-          href: "/user-actions-for-a-data-product",
+          href: "/user-actions",
         },
         {
           title: "Data Product",

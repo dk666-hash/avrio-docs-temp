@@ -1,0 +1,48 @@
+# Lineage
+You can track and document the entire data product creation process as it flows through decentralized, interconnected data domains. It provides better visibility and governance. It provides visibility while simplifying the ability to trace errors back to the root cause in a data analytics process.
+Displays the Lineage for the latest version of the Data Product.
+
+For each Data Asset, the following details are displayed in a box:
+
+- Type of Asset Displays the type data assets - Data Source or Table or Data Product.
+- Last Updated Displays the Date and Time of last changes done to the data asset.
+- Number of columns with drop down button – It expands and displays the column names and data types. 
+
+Note: This is applicable only for Data Tables and Data Products.
+- Reset button Resets the view and assets to the initial position.
+- Slide the    toggle On. This enables a column view of all the tables and the data products and show how they are connected to each other through lines. When the toggle is on the columns will expand and show the column level linkages.
+Toggle   Off to go back to the original view.
+
+Upon clicking the Data Asset, a pop up in the side panel appears containing the following details for the selected data asset.
+Details tab
+
+- Description Displays a description of the Data Asset.
+- Source Type Displays source type, such as MSSQL, Snowflake.
+- Domain- Displays the domain to which the data source or data product is mapped to.
+- Sub Domain Displays the Sub-domain the selected data product is mapped to.
+- Owner Displays the name of the owner of the domain to which the data asset is mapped to.
+- Created On Displays the date and time when the data asset was first added to the system.
+- Last Updated Displays the date and time when the metadata was refreshed, or some manual edit was done to the data asset.
+
+Note: For the Data Product Asset, there will be two more tabs on the Side Panel, as displayed below:
+
+## Query tab
+Query tab displays details are as per the last query run executed related to the data product across the Extrica environment. It could be run manually in Discovery or in the backend, as part of other operations.
+
+- Last Queried Displays the date and time when the data product was last queried on the Extrica platform.
+- Query Status Displays the whether the query run was completed or had failed. 
+- Time Elapsed Displays the time consumed for the query run.
+- Rows
+- Bytes
+- Click    Copy to copy the entire SQL query.  Then click   button. It redirects you to the Query editor in a new tab. 
+
+Note: In case the query tabs have reached the maximum limit, then the user will view the following error message.
+Maximum tab limit reached. Kindly close some tab(s) and try again” (Okay/Cancel).
+
+## Version History
+
+Version History displays the list of links for only the previous versions of the data product in descending order as the current version is already open.
+Any changes done for the data product leads to version change which then gets reflected here. The newly created version is treated as the latest version whereas the previous version is added to the Version History list.
+
+When user clicks View Lineage for any previous version, the related version’s lineage opens in a new tab and the user can switch between the tabs.
+Note: All tabs except the current version tab can be closed.
